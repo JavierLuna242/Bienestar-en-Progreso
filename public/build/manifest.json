@@ -1,0 +1,43 @@
+{
+  "_historial-BpUfalT-.js": {
+    "file": "assets/historial-BpUfalT-.js",
+    "name": "historial"
+  },
+  "resources/css/app.css": {
+    "file": "assets/app-HQaNwMCA.css",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "name": "app",
+    "names": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DlXC3E79.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/resultado.js",
+      "resources/js/progreso.js"
+    ]
+  },
+  "resources/js/progreso.js": {
+    "file": "assets/progreso-CTO3Y4r9.js",
+    "name": "progreso",
+    "src": "resources/js/progreso.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_historial-BpUfalT-.js"
+    ]
+  },
+  "resources/js/resultado.js": {
+    "file": "assets/resultado-0AHVslzH.js",
+    "name": "resultado",
+    "src": "resources/js/resultado.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_historial-BpUfalT-.js"
+    ]
+  }
+}

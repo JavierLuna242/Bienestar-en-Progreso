@@ -29,6 +29,10 @@
                     <x-boton :href="route('valoracion')" variante="cta" icono="flecha" class="px-6 py-3.5 text-base">Iniciar valoración</x-boton>
                     <x-boton :href="route('progreso')" variante="claro" icono="tendencia" class="px-6 py-3.5 text-base">Ver mi progreso</x-boton>
                 </div>
+                <a href="#video" class="mt-5 inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white">
+                    <span class="flex size-7 items-center justify-center rounded-full bg-white/10"><x-icono nombre="play" class="size-3.5" /></span>
+                    Mira cómo funciona en 3 minutos
+                </a>
                 <dl class="mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
                     @foreach ([['5 min', 'de duración'], ['6 áreas', 'evaluadas'], ['100 %', 'privado']] as [$cifra, $texto])
                         <div>
@@ -76,12 +80,18 @@
     </section>
 
     {{-- Cómo funciona --}}
-    <section class="contenedor py-16 sm:py-20">
+    <section id="video" class="contenedor scroll-mt-20 py-16 sm:py-20">
         <div class="max-w-2xl">
             <p class="text-sm font-semibold text-naranja">Cómo funciona</p>
             <h2 class="mt-2 text-3xl font-semibold tracking-tight text-slate-900">Tres pasos, sin cuentas ni contraseñas</h2>
+            <p class="mt-3 text-slate-600">En este video te mostramos las funcionalidades de la web y cómo usarla paso a paso.</p>
         </div>
-        <div class="mt-10 grid gap-4 md:grid-cols-3">
+        {{-- #t=0.1 hace que Safari muestre el primer fotograma como portada --}}
+        <video src="/video/bienestar.mp4#t=0.1" controls preload="metadata" playsinline
+               class="mt-10 aspect-video w-full rounded-2xl border border-slate-200/80 bg-noche shadow-xl shadow-slate-900/10">
+            Tu navegador no puede reproducir este video. <a href="/video/bienestar.mp4" class="underline">Descárgalo aquí</a>.
+        </video>
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
             @foreach ([
                 ['portapapeles', 'Responde el test', '7 secciones breves sobre tu actividad física, alimentación, descanso y bienestar mental.'],
                 ['reporte', 'Recibe tu reporte', 'Puntaje global y por área, IMC, perfil de salud y recomendaciones. Descárgalo en PDF.'],
